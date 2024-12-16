@@ -1,4 +1,4 @@
-import 'package:doctor_appointment_app/componets/button.dart';
+import 'package:doctor_appointment_app/components/button.dart';
 import 'package:doctor_appointment_app/utils/config.dart';
 import 'package:flutter/material.dart';
 
