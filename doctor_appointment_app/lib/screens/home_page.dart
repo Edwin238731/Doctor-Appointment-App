@@ -1,6 +1,5 @@
 import 'package:doctor_appointment_app/components/appointment_card.dart';
 import 'package:doctor_appointment_app/components/doctors_cart.dart';
-import 'package:doctor_appointment_app/screens/appointment_page.dart';
 import 'package:doctor_appointment_app/utils/config.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -139,7 +138,9 @@ class _HomePageState extends State<HomePage> {
                 Config.spaceSamall,
                 Column(
                   children: List.generate(10, (index){
-                    return DoctorsCart();
+                    return DoctorsCart(
+                      route: 'Doctor_detail',
+                    );
                   }),
                 )
               ],

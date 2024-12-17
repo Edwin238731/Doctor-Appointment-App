@@ -1,14 +1,12 @@
 import 'package:doctor_appointment_app/utils/config.dart';
 import 'package:flutter/material.dart';
 
-class DoctorsCart extends StatefulWidget {
-  const DoctorsCart({super.key});
-
-  @override
-  State<DoctorsCart> createState() => _DoctorsCartState();
-}
-
-class _DoctorsCartState extends State<DoctorsCart> {
+class DoctorsCart extends StatelessWidget {
+  const DoctorsCart({
+    super.key,
+    required this.route,
+  });
+  final String route;
   @override
   Widget build(BuildContext context) {
     Config().init(context);
@@ -74,7 +72,10 @@ class _DoctorsCartState extends State<DoctorsCart> {
             ],
           ),
         ),
-        onTap: (){},// redirigir a detalles sobre el doctor
+        onTap: (){
+          // redirigir a detalles sobre el doctor
+          Navigator.of(context).pushNamed(route);
+        },
       ),
     );
   }

@@ -1,5 +1,8 @@
 import 'package:doctor_appointment_app/main_layout.dart';
 import 'package:doctor_appointment_app/screens/auth_page.dart';
+import 'package:doctor_appointment_app/screens/booking_page.dart';
+import 'package:doctor_appointment_app/screens/doctor_details.dart';
+import 'package:doctor_appointment_app/screens/success_booked.dart';
 import 'package:doctor_appointment_app/utils/config.dart';
 import 'package:flutter/material.dart';
 
@@ -48,7 +51,11 @@ class MyApp extends StatelessWidget {
         //Esta es la ruta inicial de la aplicación, que es la página de autenticación (iniciar sesión y registrarse).
         '/':(context)=> const AuthPage(),
         //Esto es para el diseño principal después de iniciar sesión.
-        'main': (context)=>const MainLayout()
+        'main': (context)=>const MainLayout(),
+        'Doctor_detail': (context) => const DoctorDetails(),
+        'booking_page': (context) => BookingPage(),
+        'succes_booking': (context) => AppointmentBooked(),
+
       },
     );
   }
