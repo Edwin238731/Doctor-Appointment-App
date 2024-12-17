@@ -93,14 +93,8 @@ class _AppointmentCardState extends State<AppointmentCard> {
   }
 }
 //schedule widget
-class ScheduleCard extends StatefulWidget {
+class ScheduleCard extends StatelessWidget {
   const ScheduleCard({super.key});
-
-  @override
-  State<ScheduleCard> createState() => _ScheduleCardState();
-}
-
-class _ScheduleCardState extends State<ScheduleCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -113,18 +107,19 @@ class _ScheduleCardState extends State<ScheduleCard> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Icon(Icons.calendar_today,
-          color: Colors.white,
-          size: 15,
+          Icon(
+            Icons.calendar_today,
+            color: Colors.white,
+            size: 15,
           ),
-          SizedBox(width: 5,),
+          SizedBox(
+            width: 5,
+          ),
           Text(
             'Miercoles, 18/12/2024',
             style: const TextStyle(color: Colors.white),
           ),
-          SizedBox(
-            width: 20
-          ),
+          SizedBox(width: 20),
           Icon(
             Icons.access_alarm,
             color: Colors.white,
@@ -134,13 +129,12 @@ class _ScheduleCardState extends State<ScheduleCard> {
             width: 5,
           ),
           Flexible(
-            child: Text(
-              '2:00 pm',
-              style: TextStyle(
-                color:Colors.white,
-              ),
-            )
-          )
+              child: Text(
+            '2:00 pm',
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ))
         ],
       ),
     );
